@@ -1,0 +1,22 @@
+<!-- -*- mode: jinja2 -*- -->
+{% extends "base.html" %}
+{% block title %}New Recipe{% endblock title %}
+{% block content %}
+  <!-- manually written form for now -->
+  <form method="post" action="/recipe">
+    {{ input("name", label="name") }}
+    {{ input("date", label="date", type="date") }}
+
+    <h2>Recipe</h2>
+    <table class="ingredients">
+      <tr class="ingredient">
+        <td>
+          {{ input("ingredients-0-ingredient", label="ingredient") }}
+        </td>
+        <td>
+          {{ input("ingredients-0-amount", label="amount") }}
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endblock content %}

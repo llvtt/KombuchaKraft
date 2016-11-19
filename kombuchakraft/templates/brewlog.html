@@ -1,0 +1,31 @@
+<!-- -*- mode: jinja2 -*- -->
+{% extends "base.html" %}
+{% block title %}{{ journal.recipe.title }} Brew Log{% endblock title %}
+{% block content %}
+  <h2>Journal</h2>
+  <table class="journal">
+    <tbody>
+      {% for event in journal.events %}
+        <tr class="journal-event">
+          <td class="journal-date">{{ event.date }}</td>
+          <td class="journal-comment">{{ event.comment }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr class="journal-event">
+        <td class="journal-date">
+          {{ input("date", type="date", label="date", name="date") }}
+        </td>
+        <td class="journal-comment">
+          <textarea name="event-comment" id="event-comment"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Add Entry" />
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+{% endblock content %}
