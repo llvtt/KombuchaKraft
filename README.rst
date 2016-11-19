@@ -1,7 +1,7 @@
 KombuchaKraft
 =============
 
-A simple kombucha recipe and brew log. KombuchaKraft is a work-in-progress. Help
+A simple kombucha recipe creator and brew log. KombuchaKraft is a work-in-progress. Help
 us out by contributing!
 
 Installation
